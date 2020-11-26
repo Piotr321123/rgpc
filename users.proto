@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package users;
+
+// The string reversal service definition.
+service Users {
+    // Function invoked to send the request
+    rpc registerUser (RegisterUserRequest) returns (RegisterUserReply) {}
+    rpc readUsers (ReadUsersRequest) returns ( stream ReadUsersReply) {}
+    rpc readUser (ReadUserRequest) returns ( ReadUserReply) {}
+}
+
+message RegisterUserRequest {
+      string email = 1;
+  string nickname = 2;
+  string password = 3;
+  bool isActive = 4;
+}
+
+message RegisterUserReply {
+    string errorMsg = 1;
+}
+
+message ReadUsersRequest {
+  int32 pageNumber= 1;
+  int32 pageSize = 2;
+  }
+
+message ReadUsersReply {
+      string email = 1;
+  string nickname = 2;
+  string password = 3;
+  bool isActive = 4;
+}
+
+message ReadUserRequest {
+  string nickname = 1;
+  }
+
+message ReadUserReply {
+      string email = 1;
+  string nickname = 2;
+  string password = 3;
+  bool isActive = 4;
+}
