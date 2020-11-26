@@ -18,3 +18,7 @@ popd
 
 make 
 make install
+
+//mam nadzieję, że to wszystkie kroki. Niestety, kiedy próbowałem postawić maszynę od zera w czasie wykonywania kroku z linii 15, zacięło mi się ubuntu i 
+//nie byłem w stanie dokończyć tego przed 24 
+
